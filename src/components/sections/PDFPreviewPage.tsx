@@ -14,8 +14,11 @@ export default function PDFPreviewPage() {
   const codeId = searchParams.get('codeId')
 
   useEffect(() => {
-    setUrl(`${API_BASE_URL}book/${collectionName}.pdf`)
+    if (collectionName) {
+      setUrl(`http://147.93.87.131/books/${collectionName}.pdf`)
+    }
   }, [collectionName])
+  
 
   return (
     <div className="relative top-[100px]">
