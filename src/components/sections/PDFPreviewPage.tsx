@@ -3,7 +3,6 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { API_BASE_URL } from '@/constants/domains'
 
 const PDFViewer = dynamic(() => import('./PDFViewer'), { ssr: false })
 
