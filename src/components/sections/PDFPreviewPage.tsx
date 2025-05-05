@@ -17,7 +17,6 @@ export default function PDFPreviewPage() {
       setUrl(`http://147.93.87.131/books/${collectionName}.pdf`)
     }
   }, [collectionName])
-  
 
   return (
     <div className="relative top-[100px]">
@@ -25,7 +24,6 @@ export default function PDFPreviewPage() {
 
       <Link
         href={`/chats?codeId=${codeId}`}
-        target="_blank"
         rel="noopener noreferrer"
         className="gradient-btn fixed bottom-1 left-4 transform -translate-y-1/2  text-white px-[20px] py-4 h-[54px] w-[192px] text-center rounded-[45px] shadow-lg  transition-all"
       >

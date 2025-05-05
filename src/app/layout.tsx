@@ -6,7 +6,12 @@ import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'المهندس الذكي للكود السعودي',
-  description: 'SBC',
+  description:
+    'شركة كنز الصحراء إحدى الشركات الرائدة في مجال المقاولات منذ أكثر من 40 عاماً، ومع كلّ الظروف والتغييرات والتطورات الحاصلة بالمملكة العربية السعودية وتواكباً مع رؤية 2030 فقد تم توسع الشركة وعمل بعض التطويرات منذ عام 2017 لتصبح باسم شركة كنز الصحراء للمقاولات .',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

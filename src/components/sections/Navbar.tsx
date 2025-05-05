@@ -3,6 +3,7 @@ import { useAuth } from '@/context/AuthContext'
 import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 function Navbar() {
   const { logout, user } = useAuth()
@@ -41,10 +42,16 @@ function Navbar() {
   return (
     <nav className="absolute top-[30px] left-0 right-0 z-50 h-20">
       <div className="container-padding w-[100%] flex items-center justify-between">
-        <div className="text-[30px] font-bold relative">
-          <span className="text-primary relative top-[5px]">+Insured</span>
-          <span className="bg-[#e25f57] w-[44px] h-[44px] rounded-[50%] absolute left-[-10px] z-[-1]"></span>
-        </div>
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="Saudi Code"
+            height={70}
+            width={140}
+            objectFit="contain"
+            loading="lazy"
+          />
+        </Link>
 
         {/* Mobile menu button */}
         <div className="md:hidden flex gap-3 items-center">
@@ -69,9 +76,6 @@ function Navbar() {
           </li>
           <li>
             <Link href="/about-us">من نحن</Link>
-          </li>
-          <li>
-            <Link href="/#contact">تواصل</Link>
           </li>
         </ul>
 
@@ -100,7 +104,7 @@ function Navbar() {
                       logout()
                       setIsDropdownOpen(false)
                     }}
-                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-right"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-right cursor-pointer"
                   >
                     تسجيل الخروج
                   </button>
@@ -109,7 +113,7 @@ function Navbar() {
             </div>
           ) : (
             <div
-              className="primary-theme-btn text-white rounded-full px-6 py-2 text-sm"
+              className="primary-theme-btn text-white rounded-full px-6 py-2 text-sm cursor-pointer"
               onClick={() => {
                 localStorage.setItem('lastPage', route)
                 router.push('/auth/login')
@@ -137,11 +141,6 @@ function Navbar() {
               <li>
                 <Link href="/about-us" onClick={() => setIsMenuOpen(false)}>
                   من نحن
-                </Link>
-              </li>
-              <li>
-                <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
-                  تواصل{' '}
                 </Link>
               </li>
 

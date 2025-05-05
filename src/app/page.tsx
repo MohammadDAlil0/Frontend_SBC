@@ -1,9 +1,6 @@
 import CodesCards from '@/components/sections/CodesCards'
 import Footer from '@/components/sections/Footer'
 import HeroSection from '@/components/sections/HeroSection'
-import Logos from '@/components/sections/Logos'
-// import Newsletter from '@/components/sections/Newsletter'
-import Testimonials from '@/components/sections/Testimonials'
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -38,9 +35,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Logos />
+      {/* <Logos /> */}
       <CodesCards />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Newsletter /> */}
       <Footer />
     </main>

@@ -9,6 +9,7 @@ import { useEffect, useState, useRef } from 'react'
 import ChatInput from './ChatInput'
 import Sidebar from './ChatSidebar'
 import { CircularProgress } from '@mui/material'
+import Image from 'next/image'
 
 interface Message {
   id: string // Ensure it's a string to match API response
@@ -132,9 +133,15 @@ export default function Chat({
           className="fixed left-0 top-0 px-6 py-3 w-[100%] flex justify-between items-center  bg-white shadow "
           onClick={() => setOpen(true)}
         >
-          <Link href="/" className="text-[20px] font-bold relative">
-            <span className="text-primary relative top-[0px]">+Insured</span>
-            <span className="bg-[#e25f57] w-[24px] h-[24px] rounded-[50%] absolute left-[-10px] z-[-1]"></span>
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="Saudi Code"
+              height={70}
+              width={120}
+              objectFit="contain"
+              loading="lazy"
+            />
           </Link>
           <div className="text-black">{'☰'}</div>
         </div>

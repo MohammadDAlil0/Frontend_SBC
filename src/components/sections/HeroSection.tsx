@@ -12,14 +12,14 @@ function HeroSection() {
             className="text-primary lg:text-[94px] md:text-[74px] text-[54px] font-[900]"
             style={{ lineHeight: '171%' }}
           >
-            الـكـود السعودي
+            المهندس الذكي{' '}
           </span>
           <br />
           <span
             className="text-primary lg:text-[64px] md:text-[44px] text-[34px] font-[500]"
             style={{ lineHeight: '171%' }}
           >
-            للمنشأت الخرسانية{' '}
+            للكود السعودي{' '}
           </span>
         </h1>
         <Link
@@ -37,6 +37,7 @@ function HeroSection() {
             alt="Saudi Code Map"
             fill
             objectFit="contain"
+            loading="lazy"
           />
         </div>
       </div>
