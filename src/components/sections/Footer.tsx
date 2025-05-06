@@ -48,7 +48,7 @@ function Footer() {
       </div>
 
       <p className="text-center md:text-[20px] text-[16px] text-[#7D7D7D] mt-10 border-t py-4 border-[#DADADA]">
-        تم تطويره بواسطة <b>cart-wheel.inline</b>
+        تم تطويره بواسطة <a href='https://cart-wheel.online/'>cart-wheel.online</a>
       </p>
     </footer>
   )
